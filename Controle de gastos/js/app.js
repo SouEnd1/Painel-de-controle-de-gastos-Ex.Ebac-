@@ -15,7 +15,6 @@ formulario.addEventListener("submit", (evento) => {
   //Prevenção do comportamento padrão do formulário
   evento.preventDefault();
 
-
   const valorInformado = formulario.elements.valor.value;
   const categoriaInformada = formulario.elements.categoria.value;
 
@@ -24,15 +23,10 @@ formulario.addEventListener("submit", (evento) => {
     return;
   }
 
-  const categoria = gastosPorCategoria.obterCategoriaPorNome(categoriaInformada);
+  const categoria =
+    gastosPorCategoria.obterCategoriaPorNome(categoriaInformada);
   categoria.adicionarValor(valorInformado);
-
-
 
   atualizarInterface(gastosPorCategoria);
   formulario.reset();
-
 });
-
-
-

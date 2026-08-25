@@ -26,13 +26,13 @@ export class ListaGastosPorCategoria {
   constructor(...categorias) {
     this.#categorias = categorias;
   }
- get categorias() {
+  get categorias() {
     return this.#categorias;
   }
   obterCategoriaPorNome(nome) {
     return this.#categorias.find((categoria) => categoria.nome === nome);
   }
- 
+
   obterTotal() {
     //Redução de dados com o método reduce
     return this.#categorias.reduce(
