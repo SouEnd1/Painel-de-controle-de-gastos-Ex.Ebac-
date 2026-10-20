@@ -19,7 +19,7 @@ formulario.addEventListener("submit", (evento) => {
   const categoriaInformada = formulario.elements.categoria.value;
 
   if (valorNegativo(valorInformado)) {
-    alert("Valor inválido. O valor não pode ser negativo ou vazio.");
+    alert("Valor inválido. Informe um valor maior que zero.");
     return;
   }
 
