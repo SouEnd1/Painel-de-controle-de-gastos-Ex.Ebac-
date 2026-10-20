@@ -3,7 +3,10 @@ const obterElemento = (id) => document.getElementById(id);
 const formatarMoeda = (valor) => valor.toFixed(2).replace(".", ",");
 
 //Funções puras
-export const valorNegativo = (valor) => valor < 0;
+export const valorNegativo = (valor) => {
+  const numero = Number(valor);
+  return !Number.isFinite(numero) || numero <= 0;
+};
 
 //Atualizar a interface do usuário
 export const atualizarInterface = (gastosPorCategoria) => {
