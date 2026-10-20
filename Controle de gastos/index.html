@@ -14,9 +14,12 @@
         <input
           name="valor"
           type="number"
-          placeholder="Digite o valor do gasto"
-        />
-        <select name="categoria">
+          min="0.01"
+          step="0.01"
+          required
+          placeholder="Digite o valor do gasto"        
+          />
+        <select name="categoria" required>
           <option>Alimentação</option>
           <option>Transporte</option>
           <option>Lazer</option>
